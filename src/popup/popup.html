@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PHI Mask 本地脱敏</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><span class="badge">本地工具 · MVP</span><h1>PHI Mask 本地脱敏</h1><p class="privacy">全部在本地处理，不上传</p></header>
+<main>
+<label for="input">粘贴待脱敏文本</label>
+<textarea id="input" rows="6" placeholder="例如：姓名：张三；DOB: 1980-03-12" spellcheck="false" autocomplete="off"></textarea>
+<fieldset><legend>选择脱敏类型</legend><div id="types"></div></fieldset>
+<div class="actions"><button id="redact" disabled>脱敏</button><span id="quota">正在读取本地配额…</span></div>
+<label for="output">脱敏结果</label><textarea id="output" rows="6" readonly spellcheck="false"></textarea>
+<button id="copy" class="secondary" disabled>复制</button>
+<p id="summary" aria-live="polite">尚未脱敏</p>
+<p id="status" role="status" aria-live="polite"></p>
+<details><summary>本地许可演示</summary><p>每日免费 3 次，按本机日期重置。此许可仅为本地占位演示，不涉及付费或安全授权。</p><button id="unlock" class="secondary" disabled>启用本地演示解锁</button><button id="reset" class="secondary" disabled>恢复免费模式</button></details>
+</main>
+<footer>不构成合规或医疗建议，脱敏可能遗漏，请人工复核</footer>
+<script src="../lib/redact.js"></script><script src="../lib/license.js"></script><script src="../lib/quota.js"></script><script src="popup.js"></script>
+</body></html>
