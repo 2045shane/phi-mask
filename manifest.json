@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "PHI Mask 本地脱敏",
+  "version": "0.1.0",
+  "description": "本地启发式文本脱敏，支持中英文常见个人与医疗标识。请人工复核。",
+  "permissions": ["storage", "clipboardWrite"],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {"16":"icons/icon16.png","32":"icons/icon32.png","48":"icons/icon48.png","128":"icons/icon128.png"}
+  },
+  "icons": {"16":"icons/icon16.png","32":"icons/icon32.png","48":"icons/icon48.png","128":"icons/icon128.png"}
+}
